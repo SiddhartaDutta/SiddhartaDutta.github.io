@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- V: 0.2.2 -->
+<!-- V: 0.3.0 -->
 
 <head>
 
@@ -43,35 +43,39 @@
             align-items: center;
         }
 
-            .grid > div {
-                background-color: #b9d4e4;
-                margin-block-start: 1em;
+        .grid-box {
+            background-color: #b9d4e4;
+            margin-block-start: 1em;
+        }
+
+            .grid-box > h4 > a {
+                padding: 5px;
+                float: left;
             }
 
-                .grid > a {
-                    padding: 5px;
-                    float: left;
+                .grid-box > h4 > a:link {
+                    color: #3B3B3B;
+                    background-color: #b9d4e4;
                 }
 
-                    .grid > a:link {
-                        color: #3B3B3B;
-                        background-color: #b9d4e4;
-                    }
+                .grid-box > h4 > a:visited {
+                    color: #3B3B3B;
+                    background-color: #b9d4e4;
+                }
 
-                    .grid > a:visited {
-                        color: #3B3B3B;
-                        background-color: #b9d4e4;
-                    }
+                .grid-box > h4 > a:hover {
+                    color: white;
+                    background-color: #97CAE7;
+                }
 
-                    .grid > a:hover {
-                        color: white;
-                        background-color: #97CAE7;
-                    }
+                .grid-box > h4 > a:active {
+                    color: white;
+                    background-color: #97CAE7;
+                }
 
-                    .grid > a:active {
-                        color: white;
-                        background-color: #97CAE7;
-                    }
+            .grid-box > p {
+                color: gray;
+            }
 
     </style>
 
@@ -148,22 +152,31 @@
 
     <div class="grid">
 
-        <div>
+        <div class="grid-box">
             <h4>
-                Taft Robotics Team Website
+                <a target="_blank" href="https://tinyurl.com/taftrobotics">Taft Robotics Team Website</a>
             </h4>
+            <p>
+                test desc.
+            </p>
         </div>
 
-        <div>
+        <div class="grid-box">
             <h4>
-                Taft Robotics Team YouTube Channel
+                <a target="_blank" href="https://www.youtube.com/channel/UCbzlLKpJ07hTK-u8ZXaagcA">Taft Robotics Team YouTube Channel</a>
             </h4>
+            <p>
+                test desc..
+            </p>
         </div>
 
-        <div class="grid">
-            
+        <div class="grid-box">
+            <h4>
                 <a target="_blank" href="https://tinyurl.com/taftmodelunitednations">Taft MUN Club Website</a>
-            
+            </h4>
+            <p>
+                test desc...
+            </p>
         </div>
 
     </div>
