@@ -21,19 +21,40 @@
             overflow-wrap: break-word;
         }
 
-        .gray-text-roboto {
+        .roboto {
             font-family: 'Roboto Mono';
             color: WindowText;
         }
 
-        .sub-head-roboto {
-            font-family: 'Roboto Mono';
-            color: WindowText;
+        article {
+            margin: 0;
+            padding: 5px;
+            background-color: #b9d4e4;
         }
+
+            article > h1, article {
+                margin: 10px;
+                padding: 5px;
+            }
+
+            article > article {
+                background: #D7E7F0;
+            }
+
+                article > article > h2, p {
+                    margin: 4px;
+                    font-size: 90%;
+                }
+
+    </style>
+
+    <!--    BOTTOM OF PAGE BUTTONS  -->
+    <style>
 
         .bottom-icons {
-            position: fixed;     
+            position: relative;     
             text-align: center;
+            top: 10px;
             bottom: 10px; 
             width: 100%;
         }
@@ -52,19 +73,18 @@
                 color: black;
             }
 
-
-
     </style>
 
 </head>
 
-<body>
+<body class="roboto">
 
-    <h2 class="sub-head-roboto">About me</h2>
-    <div class="gray-text-roboto">
+    <!--    ABOUT ME    -->
+
+    <h2>About me</h2>
     <p>Hi!
         I'm Siddharta Dutta, a 1st year Computer Science BS + MS major at University of California,
-       Riverside.<br> <br>My current interests include:
+    Riverside.<br> <br>My current interests include:
 
         <ul>
             <li>Artificial Intelligence & Machine Learning</li>
@@ -73,33 +93,76 @@
             <li>Cybersecurity</li>
         </ul>
     </p>
-    </div>
 
-    <h2 class="sub-head-roboto">Current projects</h2>
+    <!--    ACTIVITIES  -->
+
+    <h2>Activities</h2>
+    <article>
+
+        <article>
+            <h2>UAS @ UCR</h2>
+            <ul>
+                <li>2022-2023 Computer Vision Subteam Lead</li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>Cyber @ UCR</h2>
+            <ul>
+                <li>2021-2022 WRCCDC Linux Alternate</li>
+            </ul>
+        </article>
+
+    </article>
+
+    <!--    CURRENT PROJECTS    -->
+
+    <h2>Current projects</h2>
+    <article>
+
+        <article>
+            <h2>Linear Algbra Algorithms</h2>
+            <p>
+                To better understand data structures and linear algebra, I created a matrix class
+                that will have a multitude of methods all designed to tackle different linear
+                algbra problems. The ultimate goal with these algorithms is implementation into a
+                custom Discord bot capable of solving a multitude of homework questions.
+
+                <br><br>
+
+                The project's source code can be found in 
+                <a href="https://github.com/SiddhartaDutta/Linear-Algebra-Algorithms" target="_blank"> 
+                    this GitHub repository.
+                </a>
+            </p>
+        </article>
+
+    </article>
     
+    <!--    PAST PROJECTS   -->
 
-    <h2 class="sub-head-roboto">Past projects</h2>
+    <h2>Past projects</h2>
 
-    <h2 class="sub-head-roboto">Current resume</h2>
-    <div class="gray-text-roboto">
+    <!--    CURRENT RESUME  -->
 
-        <p>My current resume. I update it fairly regularly.
+    <h2>Current resume</h2>
+    <p>My current resume. I update it fairly regularly.
 
-            <button class="button" id="resumeLink">
+        <button class="button" id="resumeLink">
 
-                <i class="fa-solid fa-up-right-from-square"></i>
-    
-                <script type="text/javascript">
-                    document.getElementById("resumeLink").onclick = function(){
-                        location.href = "https://docs.google.com/document/d/1uhsuMyuzubqKrURkPYEuel6FVvSMK5vAYwMmBBU44Fk/edit?usp=sharing";
-                    };
-                </script>
-    
-            </button>
+            <i class="fa-solid fa-up-right-from-square"></i>
 
-        </p>
+            <script type="text/javascript">
+                document.getElementById("resumeLink").onclick = function(){
+                    location.href = "https://docs.google.com/document/d/1uhsuMyuzubqKrURkPYEuel6FVvSMK5vAYwMmBBU44Fk/edit?usp=sharing";
+                };
+            </script>
 
-    </div>
+        </button>
+
+    </p>
+
+    <!--    BOTTOM OF PAGE CONTACT ICONS    -->
 
     <div class="bottom-icons">
 
