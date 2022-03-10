@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- V: 0.3.7 -->
-
+    
 <head>
-
+    
+    <!--    Fonts   -->
     <meta charset="utf-8" />
     <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
 
+    <!--    Tab Icon/Name   -->
     <title>Siddharta Dutta</title>
-    <link rel="shortcut icon" href="liltree.png" />
+    <link rel="shortcut icon" href="liltree.png"/>
+
+    <!--    Icons   -->
+    <script src="https://kit.fontawesome.com/1d850a55eb.js" crossorigin="anonymous"></script>
 
     <style>
 
@@ -18,179 +21,372 @@
             overflow-wrap: break-word;
         }
 
-        .gray-text-roboto {
+        .roboto {
             font-family: 'Roboto Mono';
-            color: #3B3B3B;
-        }
-
-        .sub-head {
-            font-family: Arial, sans-serif;
             color: WindowText;
         }
 
-        .style1 {
-            font-family: "Times New Roman", Times, serif;
-            color: WindowText;
+        article {
+            margin: 0;
+            padding: 5px;
+            background-color: #b9d4e4;
         }
+
+            article > h1, article {
+                margin: 10px;
+                padding: 5px;
+            }
+
+            article > article {
+                background: #D7E7F0;
+            }
+
+                article > article > h2, p {
+                    margin: 4px;
+                    font-size: 90%;
+                }
+
     </style>
 
+    <!--    LINK STYLING    -->
     <style>
 
-        .grid {
-            display: grid;
-            height: inherit;
-            grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-            gap: 20px;
-            align-items: center;
-        }
-
-        .grid-box {
+        a {
+            color: WindowText;
+            text-decoration: none;
             background-color: #b9d4e4;
-            margin-block-start: 10px;
-            margin-block-end: 10px;
-            margin-inline: 2.5px;
         }
 
-            .grid-box > h4 {
-                margin: 0px 0px 40px 0px;
-                font-weight: bold;
-            }
+        a:hover {
+            background-color: #E9F2F7;
+        }
 
-            .grid-box > h4 > a {
-                padding: 10px;
-                float: left;
-            }
+    </style>
 
-                .grid-box > h4 > a:link {
-                    color: #3B3B3B;
-                    background-color: #b9d4e4;
-                }
+    <!--    BOTTOM OF PAGE BUTTONS  -->
+    <style>
 
-                .grid-box > h4 > a:visited {
-                    color: #3B3B3B;
-                    background-color: #b9d4e4;
-                }
+        .bottom-icons {
+            position: relative;     
+            text-align: center;
+            top: 10px;
+            bottom: 10px; 
+            width: 100%;
+        }
 
-                .grid-box > h4 > a:hover {
-                    color: #3B3B3B;
-                    background-color: #97CAE7;
-                }
+        .button {
+            background-color: #D7E7F0;
+            color: black;
+            border: none;
+            border-radius: 8px;
+            padding: 1%;
+            cursor: pointer;
+        }
 
-                .grid-box > h4 > a:active {
-                    color: white;
-                    background-color: #97CAE7;
-                }
-
-            .grid-box > p {
-                color: gray;
-                margin: 0px 0px 10px 0px;
-                padding: 10px;
+            .button:hover {
+                background-color: #b9d4e4;
+                color: black;
             }
 
     </style>
 
 </head>
 
-<body>
+<body class="roboto">
 
+    <!--    ABOUT ME    -->
 
-    <h2 class="sub-head">Biography</h2>
+    <h2>About me</h2>
+    <p>Hi!
+        I'm Siddharta Dutta, a 1st year Computer Science BS + MS candidate at the University of
+        California, Riverside.<br> <br>My current interests include:
 
-    <h2 class="sub-head">Recent Interests</h2>
-    <ul>
-        <li>Motion control based off of odometry</li>
-        <li>Application of Kalman Filters in competitive robotics</li>
-        <li>Website development using HTML & CSS</li>
-        <li>Development of odometry library for VRC</li>
-    </ul>
-
-    <!-- ********** ACADEMIC ACHIEVEMENTS ********** -->
-    <h2 class="sub-head">Notable Academic Achievments</h2>
-
-    <!-- ********** ACTIVITIES ********** -->
-    <h2 class="sub-head">Activities</h2>
-
-    <!-- Robotics -->
-    <p>
-        <strong>Taft Robotics Team: </strong>Coding Instructor, Website Developer, Team Captain, Team Coding Lead <span text-align="right">08/2017 - Present</span>
+        <ul>
+            <li>Artificial Intelligence & Machine Learning</li>
+            <li>Real-time Control Systems</li>
+            <li>Embedded Systems</li>
+            <li>Cybersecurity</li>
+        </ul>
     </p>
 
-    <ul class="gray-text-roboto">
-        <li>2020-2021 Vex Robotics Competition Worlds Qualification</li>
-        <li>2020-2021 Vex Robotics Competition States Qualification</li>
-        <li>2019-2020 Vex Robotics Competition States Qualification</li>
-        <li>2019 VEX Victory in the Valley - Think Award</li>
-        <li>CAMS VEX Tournament 2019 - Think Award</li>
-    </ul>
+    <!--    CURRENT RESUME  -->
 
-    <!-- CyberPatriots -->
-    <p class="style 1"><strong>Taft CyberPatriots: </strong>Linux Specialist<p class="left">08/2018 - Present</p>
+    <h2>Current resume</h2>
+    <p>My current resume. I update it fairly regularly.
 
-    <!-- ********** PROJECTS/PUBLISHED WORK ********** -->
-    <h2 class="sub-head">Projects + Published Work</h2>
+        <button class="button" id="resumeLink">
 
-    <p class="style1">
-        <strong>Taft Robotics Team:</strong> After the robotics team's administration graduated following the 2019-2020 school year, I was tasked with helping with outreach and teaching. To better appeal to both current members and
-        those looking for more information, I designed and created the website. It contains content on both the organization and educational materials produced by me.
+            <i class="fa-solid fa-up-right-from-square"></i>
+
+            <script type="text/javascript">
+                document.getElementById("resumeLink").onclick = function(){
+                    location.href = "https://docs.google.com/document/d/1uhsuMyuzubqKrURkPYEuel6FVvSMK5vAYwMmBBU44Fk/edit?usp=sharing";
+                };
+            </script>
+
+        </button>
+
     </p>
 
-    <ul>
-        <li><a target="_blank" href="https://tinyurl.com/taftrobotics">Taft Robotics Team Website</a></li>
-    </ul>
+    <!--    ACTIVITIES  -->
 
-    <p class="style1">
-        <strong>Taft Robotics Team:</strong> As the most experienced and advanced coder in the club and the onset of quarentine due to the COVID-19 pandemic, I decided to conduct live coding
-        lessons which were then recorded for future reference by both members of the club and other visitors of the site/channel.
-    </p>
+    <h2>Activities</h2>
+    <article>
 
-    <ul>
-        <li><a target="_blank" href="https://www.youtube.com/channel/UCbzlLKpJ07hTK-u8ZXaagcA">Taft Robotics Team YouTube Channel</a></li>
-    </ul>
+        <article>
+            <h2>UAS @ UCR</h2>
+            <ul>
 
-    <p class="style1">
-        <strong>Taft Model United Nations:</strong> Although I didn't have an official administrative position initially, after joining my school's Model United Nations club, there was blatant
-        disorganization and a lack of out-reach. I proposed, planned, designed, and created a website to showcase the club and organize all relavant documents.
-    </p>
+                <li>2022-2023 Computer Vision Subteam Lead</li>
+                <ul>
+                    <li>TBD</li>
+                </ul>
 
-    <ul>
-        <li><a target="_blank" href="https://tinyurl.com/taftmodelunitednations">Taft MUN Club Website</a></li>
-    </ul>
+                <li>Computer Vision Software Developer</li>
+                <ul>
+                    <li>03/2022 - Present</li>
+                </ul>
 
+                <li>Communications Technician</li>
+                <ul>
+                    <li>01/2022 - Present</li>
+                </ul>
 
+                <li>Unmanned Ground Vehicle Subteam - Software and Electrical Engineer</li>
+                <ul>
+                    <li>09/21 - 03/2022</li>
+                </ul>
 
-    <h2 class="sub-head">Notable Non-Academic Achievments</h2>
+            </ul>
+        </article>
 
-    <div class="grid">
+        <article>
+            <h2>Cyber @ UCR</h2>
+            <ul>
 
-        <div class="grid-box">
-            <h4>
-                <a target="_blank" href="https://tinyurl.com/taftrobotics">Taft Robotics Team Website</a>
-            </h4>
+                <li>2022-2023 Outreach Director (Board Member/Officer)</li>
+                <ul>
+                    <li>03/2022 - Present</li>
+                </ul>
+
+                <li>WRCCDC Linux Alternate</li>
+                <ul>
+                    <li>11/2021 - Present</li>
+                </ul>
+
+            </ul>
+        </article>
+
+        <article>
+            <h2>UCR IEEE Micromouse</h2>
+            <ul>
+
+                <li>Software Engineer (Team: Orange Clown Fish) </li>
+                <ul>
+                    <li>11/2021 - Present</li>
+                </ul>
+
+            </ul>
+        </article>
+
+    </article>
+
+    <!--    CURRENT PROJECTS    -->
+
+    <h2>Current projects</h2>
+    <article>
+
+        <article>
+            <h2>Linear Algbra Algorithms</h2>
             <p>
-                To better appeal to both current members and those looking for more information, I designed and created this website for the club. 
-                It contains content on both the organization and educational materials produced by me.
-            </p>
-        </div>
+                To better understand data structures and linear algebra, I created a matrix class
+                that will have a multitude of methods all designed to tackle different linear
+                algbra problems. The ultimate goal with these algorithms is implementation into a
+                custom Discord bot capable of solving a multitude of homework questions.
 
-        <div class="grid-box">
-            <h4>
-                <a target="_blank" href="https://www.youtube.com/channel/UCbzlLKpJ07hTK-u8ZXaagcA">Taft Robotics Team YouTube Channel</a>
-            </h4>
-            <p>
-                test desc..
-            </p>
-        </div>
+                <br><br>
 
-        <div class="grid-box">
-            <h4>
-                <a target="_blank" href="https://tinyurl.com/taftmodelunitednations">Taft MUN Club Website</a>
-            </h4>
-            <p>
-                test desc...
+                The project's source code can be found in 
+                <a href="https://github.com/SiddhartaDutta/Linear-Algebra-Algorithms" target="_blank"> 
+                    this GitHub repository.
+                </a>
             </p>
-        </div>
+        </article>
+
+        <article>
+            <h2>Brainiac</h2>
+            <p>
+                Brainiac is a Discord bot designed to solve all sorts of STEM related
+                homework questions. It will function like every other calculator as it will
+                parse inputs, but it will also contain algorithms to solve much more complex
+                math problems as well as physics and chemistry problems.
+
+                <br><br>
+
+                The project's source code can be found in 
+                <a href="https://github.com/SiddhartaDutta/Brainiac" target="_blank"> 
+                    this GitHub repository.
+                </a>
+            </p>
+        </article>
+
+        <article>
+            <h2>My Personal Website</h2>
+            <p>
+                I created this website to both organize and showcase all of my work in a single
+                common space. This website will see regular updates, time stamped both on
+                GitHub and at the bottom of this website.
+
+                <br><br>
+
+                The project's source code can be found in 
+                <a href="https://github.com/SiddhartaDutta/SiddhartaDutta.github.io" target="_blank"> 
+                    this GitHub repository.
+                </a>
+            </p>
+        </article>
+
+    </article>
+    
+    <!--    PAST PROJECTS   -->
+
+    <h2>Past projects</h2>
+    <article>
+
+        <article>
+            <h2>Bruhther</h2>
+            <p>
+                A Discord bot developed in Python utilizing discord.py and JSON for data storage
+                and management. Oriented towards mini-games and server moderation.
+
+                <br><br>
+
+                The project's source code can be found in 
+                <a href="https://github.com/SiddhartaDutta/Bruhther---GPMOB" target="_blank"> 
+                    this GitHub repository.
+                </a>
+            </p>
+        </article>
+
+        <article>
+            <h2>Odom-For-91364T</h2>
+            <p>
+                Self-naviagtion algorithms written in C++ for integration with VexCode Pro.
+                Written for VRC team 91364T. Algorithms are odometric and utilize other
+                algorithms such as motion profiling and PID control loops. Algorithms
+                are also self-correcting in real-time, allowing for successful run
+                compeletion regardless of external interference.
+
+                <br><br>
+
+                The project's source code can be found in 
+                <a href="https://github.com/SiddhartaDutta/Odom-For-91364T" target="_blank"> 
+                    this GitHub repository.
+                </a>
+            </p>
+        </article>
+
+        <article>
+            <h2>VexCode Pro YouTube Tutorials</h2>
+            <p>
+                To help teach new team members how to code in C++ using the VexCode Pro library
+                in a virtual environment as a result of the COVID-19 lockdown, I recorded a
+                series of lessons taught live for both Taft Robotics Team members and other Vex
+                competitors to refer to.
+
+                <br><br>
+
+                The videos can be found at
+                <a href="https://www.youtube.com/channel/UCbzlLKpJ07hTK-u8ZXaagcA/featured" target="_blank">
+                    this link.
+                </a>
+            </p>
+        </article>
+
+        <article>
+            <h2>Taft Robotics Team Website</h2>
+            <p>
+                To better promote the team and organize documents, I created a team website.
+
+                <br><br>
+
+                The website can be found at 
+                <a href="https://tinyurl.com/taftrobotics" target="_blank"> 
+                    this link.
+                </a>
+            </p>
+        </article>
+
+        <article>
+            <h2>Taft Model United Nations Website</h2>
+            <p>
+                To better promote the team and organize documents, I created a team website.
+
+                <br><br>
+
+                The website can be found at
+                <a href="https://tinyurl.com/taftmodelunitednations" target="_blank"> 
+                    this link.
+                </a>
+            </p>
+        </article>
+
+    </article>
+
+    <!--    BOTTOM OF PAGE CONTACT ICONS    -->
+
+    <div class="bottom-icons">
+
+        <button class="button" id="emailLink">
+            <i class="fa-solid fa-envelope fa-2x"></i>
+
+            <script type="text/javascript">
+                document.getElementById("emailLink").onclick = function(){
+                    location.href = "mailto:siddhartadutta99@gmail.com";
+                };
+            </script>
+
+        </button>
+
+        <button class="button" id="githubLink">
+
+            <i class="fa fa-github fa-2x"></i>
+
+            <script type="text/javascript">
+                document.getElementById("githubLink").onclick = function(){
+                    location.href = "https://github.com/SiddhartaDutta";
+                };
+            </script>
+
+        </button>
+
+        <button class="button" id="instagramLink">
+
+            <i class="fa-brands fa-instagram fa-2x"></i>
+
+            <script type="text/javascript">
+                document.getElementById("instagramLink").onclick = function(){
+                    location.href = "https://www.instagram.com/sid._.dutta/";
+                };
+            </script>
+
+        </button>
+
+        <button class="button" id="linkedinLink">
+
+            <i class="fa fa-linkedin-square fa-2x"></i>
+
+            <script type="text/javascript">
+                document.getElementById("linkedinLink").onclick = function(){
+                    location.href = "https://www.linkedin.com/in/siddharta-dutta-79ab36223/";
+                };
+            </script>
+
+        </button>
 
     </div>
+
+
 
 </body>
 
