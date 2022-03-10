@@ -48,6 +48,21 @@
 
     </style>
 
+    <!--    LINK STYLING    -->
+    <style>
+
+        a {
+            color: WindowText;
+            text-decoration: none;
+            background-color: #b9d4e4;
+        }
+
+        a:hover {
+            background-color: #E9F2F7;
+        }
+
+    </style>
+
     <!--    BOTTOM OF PAGE BUTTONS  -->
     <style>
 
@@ -83,8 +98,8 @@
 
     <h2>About me</h2>
     <p>Hi!
-        I'm Siddharta Dutta, a 1st year Computer Science BS + MS major at University of California,
-    Riverside.<br> <br>My current interests include:
+        I'm Siddharta Dutta, a 1st year Computer Science BS + MS candidate at the University of
+        California, Riverside.<br> <br>My current interests include:
 
         <ul>
             <li>Artificial Intelligence & Machine Learning</li>
@@ -92,6 +107,25 @@
             <li>Embedded Systems</li>
             <li>Cybersecurity</li>
         </ul>
+    </p>
+
+    <!--    CURRENT RESUME  -->
+
+    <h2>Current resume</h2>
+    <p>My current resume. I update it fairly regularly.
+
+        <button class="button" id="resumeLink">
+
+            <i class="fa-solid fa-up-right-from-square"></i>
+
+            <script type="text/javascript">
+                document.getElementById("resumeLink").onclick = function(){
+                    location.href = "https://docs.google.com/document/d/1uhsuMyuzubqKrURkPYEuel6FVvSMK5vAYwMmBBU44Fk/edit?usp=sharing";
+                };
+            </script>
+
+        </button>
+
     </p>
 
     <!--    ACTIVITIES  -->
@@ -102,14 +136,56 @@
         <article>
             <h2>UAS @ UCR</h2>
             <ul>
+
                 <li>2022-2023 Computer Vision Subteam Lead</li>
+                <ul>
+                    <li>TBD</li>
+                </ul>
+
+                <li>Computer Vision Software Developer</li>
+                <ul>
+                    <li>03/2022 - Present</li>
+                </ul>
+
+                <li>Communications Technician</li>
+                <ul>
+                    <li>01/2022 - Present</li>
+                </ul>
+
+                <li>Unmanned Ground Vehicle Subteam - Software and Electrical Engineer</li>
+                <ul>
+                    <li>09/21 - 03/2022</li>
+                </ul>
+
             </ul>
         </article>
 
         <article>
             <h2>Cyber @ UCR</h2>
             <ul>
-                <li>2021-2022 WRCCDC Linux Alternate</li>
+
+                <li>2022-2023 Outreach Director (Board Member/Officer)</li>
+                <ul>
+                    <li>03/2022 - Present</li>
+                </ul>
+
+                <li>WRCCDC Linux Alternate</li>
+                <ul>
+                    <li>11/2021 - Present</li>
+                </ul>
+
+            </ul>
+        </article>
+
+        <article>
+            <h2>UCR IEEE Micromouse</h2>
+            <ul>
+
+                <li>Software Engineer (Team: Orange Clown Fish) </li>
+                <ul>
+                    <li>11/2021 - Present</li>
+                </ul>
+
             </ul>
         </article>
 
@@ -137,30 +213,125 @@
             </p>
         </article>
 
+        <article>
+            <h2>Brainiac</h2>
+            <p>
+                Brainiac is a Discord bot designed to solve all sorts of STEM related
+                homework questions. It will function like every other calculator as it will
+                parse inputs, but it will also contain algorithms to solve much more complex
+                math problems as well as physics and chemistry problems.
+
+                <br><br>
+
+                The project's source code can be found in 
+                <a href="https://github.com/SiddhartaDutta/Brainiac" target="_blank"> 
+                    this GitHub repository.
+                </a>
+            </p>
+        </article>
+
+        <article>
+            <h2>My Personal Website</h2>
+            <p>
+                I created this website to both organize and showcase all of my work in a single
+                common space. This website will see regular updates, time stamped both on
+                GitHub and at the bottom of this website.
+
+                <br><br>
+
+                The project's source code can be found in 
+                <a href="https://github.com/SiddhartaDutta/SiddhartaDutta.github.io" target="_blank"> 
+                    this GitHub repository.
+                </a>
+            </p>
+        </article>
+
     </article>
     
     <!--    PAST PROJECTS   -->
 
     <h2>Past projects</h2>
+    <article>
 
-    <!--    CURRENT RESUME  -->
+        <article>
+            <h2>Bruhther</h2>
+            <p>
+                A Discord bot developed in Python utilizing discord.py and JSON for data storage
+                and management. Oriented towards mini-games and server moderation.
 
-    <h2>Current resume</h2>
-    <p>My current resume. I update it fairly regularly.
+                <br><br>
 
-        <button class="button" id="resumeLink">
+                The project's source code can be found in 
+                <a href="https://github.com/SiddhartaDutta/Bruhther---GPMOB" target="_blank"> 
+                    this GitHub repository.
+                </a>
+            </p>
+        </article>
 
-            <i class="fa-solid fa-up-right-from-square"></i>
+        <article>
+            <h2>Odom-For-91364T</h2>
+            <p>
+                Self-naviagtion algorithms written in C++ for integration with VexCode Pro.
+                Written for VRC team 91364T. Algorithms are odometric and utilize other
+                algorithms such as motion profiling and PID control loops. Algorithms
+                are also self-correcting in real-time, allowing for successful run
+                compeletion regardless of external interference.
 
-            <script type="text/javascript">
-                document.getElementById("resumeLink").onclick = function(){
-                    location.href = "https://docs.google.com/document/d/1uhsuMyuzubqKrURkPYEuel6FVvSMK5vAYwMmBBU44Fk/edit?usp=sharing";
-                };
-            </script>
+                <br><br>
 
-        </button>
+                The project's source code can be found in 
+                <a href="https://github.com/SiddhartaDutta/Odom-For-91364T" target="_blank"> 
+                    this GitHub repository.
+                </a>
+            </p>
+        </article>
 
-    </p>
+        <article>
+            <h2>VexCode Pro YouTube Tutorials</h2>
+            <p>
+                To help teach new team members how to code in C++ using the VexCode Pro library
+                in a virtual environment as a result of the COVID-19 lockdown, I recorded a
+                series of lessons taught live for both Taft Robotics Team members and other Vex
+                competitors to refer to.
+
+                <br><br>
+
+                The videos can be found at
+                <a href="https://www.youtube.com/channel/UCbzlLKpJ07hTK-u8ZXaagcA/featured" target="_blank">
+                    this link.
+                </a>
+            </p>
+        </article>
+
+        <article>
+            <h2>Taft Robotics Team Website</h2>
+            <p>
+                To better promote the team and organize documents, I created a team website.
+
+                <br><br>
+
+                The website can be found at 
+                <a href="https://tinyurl.com/taftrobotics" target="_blank"> 
+                    this link.
+                </a>
+            </p>
+        </article>
+
+        <article>
+            <h2>Taft Model United Nations Website</h2>
+            <p>
+                To better promote the team and organize documents, I created a team website.
+
+                <br><br>
+
+                The website can be found at
+                <a href="https://tinyurl.com/taftmodelunitednations" target="_blank"> 
+                    this link.
+                </a>
+            </p>
+        </article>
+
+    </article>
 
     <!--    BOTTOM OF PAGE CONTACT ICONS    -->
 
@@ -214,6 +385,8 @@
         </button>
 
     </div>
+
+
 
 </body>
 
