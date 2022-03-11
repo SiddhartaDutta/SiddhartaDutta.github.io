@@ -63,7 +63,7 @@
 
     </style>
 
-    <!--    BOTTOM OF PAGE BUTTONS  -->
+    <!--    BOTTOM OF PAGE  -->
     <style>
 
         .bottom-icons {
@@ -87,6 +87,11 @@
                 background-color: #b9d4e4;
                 color: black;
             }
+
+        #ldm-timestamp {
+            text-align: right;
+            font-size: 80%;
+        }
 
     </style>
 
@@ -333,60 +338,70 @@
 
     </article>
 
-    <!--    BOTTOM OF PAGE CONTACT ICONS    -->
+    <!--    BOTTOM OF PAGE    -->
+    <footer>
+        <div class="bottom-icons">
 
-    <div class="bottom-icons">
+            <button class="button" id="emailLink">
+                <i class="fa-solid fa-envelope fa-2x"></i>
 
-        <button class="button" id="emailLink">
-            <i class="fa-solid fa-envelope fa-2x"></i>
+                <script type="text/javascript">
+                    document.getElementById("emailLink").onclick = function(){
+                        window.open("mailto:siddhartadutta99@gmail.com", "_self");
+                    };
+                </script>
 
-            <script type="text/javascript">
-                document.getElementById("emailLink").onclick = function(){
-                    location.href = "mailto:siddhartadutta99@gmail.com";
-                };
+            </button>
+
+            <button class="button" id="githubLink">
+
+                <i class="fa fa-github fa-2x"></i>
+
+                <script type="text/javascript">
+                    document.getElementById("githubLink").onclick = function(){
+                        window.open("https://github.com/SiddhartaDutta", "_blank");
+                    };
+                </script>
+
+            </button>
+
+            <button class="button" id="instagramLink">
+
+                <i class="fa-brands fa-instagram fa-2x"></i>
+
+                <script type="text/javascript">
+                    document.getElementById("instagramLink").onclick = function(){
+                        window.open("https://www.instagram.com/sid._.dutta/", "_blank");
+                    };
+                </script>
+
+            </button>
+
+            <button class="button" id="linkedinLink">
+
+                <i class="fa fa-linkedin-square fa-2x"></i>
+
+                <script type="text/javascript">
+                    document.getElementById("linkedinLink").onclick = function(){
+                        window.open("https://www.linkedin.com/in/siddharta-dutta-79ab36223/", "_blank");
+                    };
+                </script>
+
+            </button>
+
+        </div>
+
+        <div id="ldm-timestamp">
+            <p>Site last modified: </p>
+            <p id="test"></p>
+
+            <script>
+                let text = document.lastModified;
+                document.getElementById("test").innerHTML = text;
             </script>
+        </div>
 
-        </button>
-
-        <button class="button" id="githubLink">
-
-            <i class="fa fa-github fa-2x"></i>
-
-            <script type="text/javascript">
-                document.getElementById("githubLink").onclick = function(){
-                    location.href = "https://github.com/SiddhartaDutta";
-                };
-            </script>
-
-        </button>
-
-        <button class="button" id="instagramLink">
-
-            <i class="fa-brands fa-instagram fa-2x"></i>
-
-            <script type="text/javascript">
-                document.getElementById("instagramLink").onclick = function(){
-                    location.href = "https://www.instagram.com/sid._.dutta/";
-                };
-            </script>
-
-        </button>
-
-        <button class="button" id="linkedinLink">
-
-            <i class="fa fa-linkedin-square fa-2x"></i>
-
-            <script type="text/javascript">
-                document.getElementById("linkedinLink").onclick = function(){
-                    location.href = "https://www.linkedin.com/in/siddharta-dutta-79ab36223/";
-                };
-            </script>
-
-        </button>
-
-    </div>
-
-
+    </footer>
 
 </body>
 
