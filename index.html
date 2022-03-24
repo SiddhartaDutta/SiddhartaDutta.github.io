@@ -16,8 +16,18 @@
 
     <style>
 
+        :root {
+            --primary-bg-color: #D7E7F0;
+            --primary-snd-color: #b9d4e4;
+            --secondary-bg-color: #212F3D;
+            --secondary-snd-color: #031C31;
+
+            --curr-bg-color: var(--primary-bg-color);
+            --curr-sndbg-color: var(--primary-snd-color);
+        }
+
         body {
-            background-color: #D7E7F0;
+            background-color: var(--curr-bg-color);
             overflow-wrap: break-word;
         }
 
@@ -29,7 +39,7 @@
         article {
             margin: 0;
             padding: 5px;
-            background-color: #b9d4e4;
+            background-color: var(--curr-sndbg-color);
         }
 
             article > h1, article {
@@ -38,7 +48,7 @@
             }
 
             article > article {
-                background: #D7E7F0;
+                background: var(--curr-bg-color);
             }
 
                 article > article > h2, p {
@@ -54,7 +64,7 @@
         a {
             color: WindowText;
             text-decoration: none;
-            background-color: #b9d4e4;
+            background-color: var(--curr-sndbg-color);
         }
 
         a:hover {
@@ -74,7 +84,7 @@
         }
 
         .button {
-            background-color: #D7E7F0;
+            background-color: var(--curr-bg-color);
             color: black;
             border: none;
             border-radius: 8px;
@@ -83,7 +93,7 @@
         }
 
             .button:hover {
-                background-color: #b9d4e4;
+                background-color: var(--curr-sndbg-color);
                 color: black;
             }
 
@@ -97,6 +107,44 @@
 </head>
 
 <body class="roboto">
+
+    <button class="button" onclick="changeMode()">
+        <i class="fa-solid fa-moon"></i>
+
+        <script>
+            function changeMode(){
+
+                // Get document data
+                var rootObj = document.querySelector(':root');
+                var rootStyles = getComputedStyle(rootObj);
+
+                // Save relevant document data
+                var currColor = rootStyles.getPropertyValue('--curr-bg-color');
+                var primaryColor = rootStyles.getPropertyValue('--primary-bg-color');
+    
+                var adjuster = 0x1E130C;
+
+                console.log(currColor);
+                console.log(primaryColor);
+
+                // Update document color
+                if(currColor == primaryColor){
+                    var secondaryBgColor = rootStyles.getPropertyValue('--secondary-bg-color');
+                    var secondarySndColor = rootStyles.getPropertyValue('--secondary-snd-color');
+
+                    rootObj.style.setProperty('--curr-bg-color', secondaryBgColor);
+                    rootObj.style.setProperty('--curr-sndbg-color', secondarySndColor);
+                } else {
+                    var primarySndColor = rootStyles.getPropertyValue('--primary-snd-color');
+
+                    rootObj.style.setProperty('--curr-bg-color', primaryColor);
+                    rootObj.style.setProperty('--curr-sndbg-color', primarySndColor);
+                }
+
+            }
+        </script>
+
+    </button>
 
     <!--    ABOUT ME    -->
 
