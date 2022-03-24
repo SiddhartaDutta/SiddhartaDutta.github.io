@@ -66,11 +66,10 @@
     <!--    BOTTOM OF PAGE  -->
     <style>
 
-        .bottom-icons {
-            position: relative;     
+        #bottom-icons {
+            position: fixed;     
             text-align: center;
-            top: 10px;
-            bottom: 10px; 
+            bottom: 10px;
             width: 100%;
         }
 
@@ -125,7 +124,7 @@
 
             <script type="text/javascript">
                 document.getElementById("resumeLink").onclick = function(){
-                    location.href = "https://docs.google.com/document/d/1uhsuMyuzubqKrURkPYEuel6FVvSMK5vAYwMmBBU44Fk/edit?usp=sharing";
+                    window.open("https://docs.google.com/document/d/1uhsuMyuzubqKrURkPYEuel6FVvSMK5vAYwMmBBU44Fk/edit?usp=sharing", "_blank");
                 };
             </script>
 
@@ -340,7 +339,7 @@
 
     <!--    BOTTOM OF PAGE    -->
     <footer>
-        <div class="bottom-icons">
+        <div id="bottom-icons">
 
             <button class="button" id="emailLink">
                 <i class="fa-solid fa-envelope fa-2x"></i>
@@ -393,11 +392,11 @@
 
         <div id="ldm-timestamp">
             <p>Site last modified: </p>
-            <p id="test"></p>
+            <p id="time stamp"></p>
 
             <script>
                 let text = document.lastModified;
-                document.getElementById("test").innerHTML = text;
+                document.getElementById("time stamp").innerHTML = text;
             </script>
         </div>
 
