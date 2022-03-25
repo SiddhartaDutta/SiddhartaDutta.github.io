@@ -16,20 +16,37 @@
 
     <style>
 
+        :root {
+            --primary-bg-color: #D7E7F0;
+            --primary-snd-color: #b9d4e4;
+            --secondary-bg-color: #212F3D;
+            --secondary-snd-color: #031C31;
+
+            --curr-bg-color: var(--primary-bg-color);
+            --curr-sndbg-color: var(--primary-snd-color);
+
+            --text-color: black;
+
+            --dark-mode-icon: "fa-solid fa-moon fa-xl";
+            --light-mode-icon: "fa-solid fa-brightness";
+
+            --curr-mode-icon: var(--dark-mode-icon);
+        }
+
         body {
-            background-color: #D7E7F0;
+            background-color: var(--curr-bg-color);
             overflow-wrap: break-word;
         }
 
         .roboto {
             font-family: 'Roboto Mono';
-            color: WindowText;
+            color: var(--text-color);
         }
 
         article {
             margin: 0;
             padding: 5px;
-            background-color: #b9d4e4;
+            background-color: var(--curr-sndbg-color);
         }
 
             article > h1, article {
@@ -38,7 +55,7 @@
             }
 
             article > article {
-                background: #D7E7F0;
+                background: var(--curr-bg-color);
             }
 
                 article > article > h2, p {
@@ -52,9 +69,9 @@
     <style>
 
         a {
-            color: WindowText;
+            color: var(--text-color);
             text-decoration: none;
-            background-color: #b9d4e4;
+            background-color: var(--curr-sndbg-color);
         }
 
         a:hover {
@@ -66,17 +83,24 @@
     <!--    BOTTOM OF PAGE  -->
     <style>
 
-        .bottom-icons {
-            position: relative;     
+        #bottom-icons {
+            position: fixed;     
             text-align: center;
+            bottom: 10px;
+            width: 100%;
+        }
+
+        #dark-mode {
+            position:absolute;
+            text-align: right;
             top: 10px;
-            bottom: 10px; 
+            right: 10px;
             width: 100%;
         }
 
         .button {
-            background-color: #D7E7F0;
-            color: black;
+            background-color: var(--curr-bg-color);
+            color: var(--text-color);
             border: none;
             border-radius: 8px;
             padding: 1%;
@@ -84,8 +108,8 @@
         }
 
             .button:hover {
-                background-color: #b9d4e4;
-                color: black;
+                background-color: var(--curr-sndbg-color);
+                color: var(--text-color);
             }
 
         #ldm-timestamp {
@@ -98,6 +122,54 @@
 </head>
 
 <body class="roboto">
+
+    <div id="dark-mode">
+        <button class="button" onclick="changeMode()">
+        
+            <i class="fa-solid fa-moon fa-xl"></i>
+    
+            <script>
+                // Ensure color changes on first click
+                var initialRun = true;
+
+                function changeMode(){
+    
+                    // Get document data
+                    var rootObj = document.querySelector(':root');
+                    var rootStyles = getComputedStyle(rootObj);
+    
+                    // Save relevant document data
+                    var currColor = rootStyles.getPropertyValue('--curr-bg-color');
+                    var primaryColor = rootStyles.getPropertyValue('--primary-bg-color');
+        
+                    var adjuster = 0x1E130C;
+    
+                    // Update document color
+                    if(currColor == primaryColor || initialRun){
+                        var secondaryBgColor = rootStyles.getPropertyValue('--secondary-bg-color');
+                        var secondarySndColor = rootStyles.getPropertyValue('--secondary-snd-color');
+    
+                        rootObj.style.setProperty('--curr-bg-color', secondaryBgColor);
+                        rootObj.style.setProperty('--curr-sndbg-color', secondarySndColor);
+    
+                        rootObj.style.setProperty('--text-color', 'white');
+                        
+                        initialRun = false;
+                    } else {
+                        var primarySndColor = rootStyles.getPropertyValue('--primary-snd-color');
+    
+                        rootObj.style.setProperty('--curr-bg-color', primaryColor);
+                        rootObj.style.setProperty('--curr-sndbg-color', primarySndColor);
+    
+                        rootObj.style.setProperty('--text-color', 'black');
+                    }
+    
+                }
+            </script>
+    
+        </button>
+    </div>
+    
 
     <!--    ABOUT ME    -->
 
@@ -125,7 +197,7 @@
 
             <script type="text/javascript">
                 document.getElementById("resumeLink").onclick = function(){
-                    location.href = "https://docs.google.com/document/d/1uhsuMyuzubqKrURkPYEuel6FVvSMK5vAYwMmBBU44Fk/edit?usp=sharing";
+                    window.open("https://docs.google.com/document/d/1uhsuMyuzubqKrURkPYEuel6FVvSMK5vAYwMmBBU44Fk/edit?usp=sharing", "_blank");
                 };
             </script>
 
@@ -340,7 +412,7 @@
 
     <!--    BOTTOM OF PAGE    -->
     <footer>
-        <div class="bottom-icons">
+        <div id="bottom-icons">
 
             <button class="button" id="emailLink">
                 <i class="fa-solid fa-envelope fa-2x"></i>
@@ -393,11 +465,11 @@
 
         <div id="ldm-timestamp">
             <p>Site last modified: </p>
-            <p id="test"></p>
+            <p id="time stamp"></p>
 
             <script>
                 let text = document.lastModified;
-                document.getElementById("test").innerHTML = text;
+                document.getElementById("time stamp").innerHTML = text;
             </script>
         </div>
 
